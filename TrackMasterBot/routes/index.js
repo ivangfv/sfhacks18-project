@@ -14,8 +14,8 @@ router.get('/', function(req, res, next) {
 /* /track command tells user where product is currently located */
 bot.on([/^\/track (.+)$/, '/track productName'], (msg, props) => {
   const productName = props.match[1];
-  const text = productName + ' is currently at THIS_CITY!';
-  return bot.sendMessage(msg.from.id, text);
+  const text = productName + ' is currently at San Francisco, CA 94132!';
+  return bot.sendMessage(msg.from.id, text) + bot.sendLocation(msg.from.id, [37.7265802, -122.4907688]); 
 });
 
 bot.on([/^\/temperature (.+)$/, '/temperature productName'], (msg, props) => {
