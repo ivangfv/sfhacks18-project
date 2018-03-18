@@ -11,19 +11,21 @@ router.get('/', function(req, res, next) {
 
 //bot.on('text', (msg) => msg.reply.text(msg.text)); // echoes the message sent by user
 
-/* /track command tells user where product is currently located */
+/* /track command tells user where product is currently located with maps */
 bot.on([/^\/track (.+)$/, '/track productName'], (msg, props) => {
   const productName = props.match[1];
   const text = productName + ' is currently at San Francisco, CA 94132!';
   return bot.sendMessage(msg.from.id, text) + bot.sendLocation(msg.from.id, [37.7265802, -122.4907688]); 
 });
 
+/* /temperature command tells user current temperature of the product */
 bot.on([/^\/temperature (.+)$/, '/temperature productName'], (msg, props) => {
   const productName = props.match[1];
   const text = productName + ' is at 90 °Fahrenheit!';
   return bot.sendMessage(msg.from.id, text);
 });
 
+/* /time command tells user ETA of the product */
 bot.on([/^\/time (.+)$/, '/time productName'], (msg, props) => {
   const productName = props.match[1];
   const text = productName + '\'s estimated time of arrivial: September 22, 2024!';
