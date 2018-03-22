@@ -1,5 +1,5 @@
 # TrackMasterBot
-A Bot made using the Telegram API with Node.js and Express.js. 
+A Bot made using the Telegram API with Node.js and Express.js which gathers data from a hardware attached with Arduino LDR, GPS, and temperature sensors in order to provide real-time information about some product inside a crate.
 It did not really worked out the way we planned it.
 
 ## Instructions on how to use
