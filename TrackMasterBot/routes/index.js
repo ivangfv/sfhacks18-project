@@ -30,11 +30,11 @@ bot.on([/^\/temperature (.+)$/, '/temperature productName'], (msg, props) => {
   if(temperatureCountHack == 1) {
     temperatureCountHack++;
     console.log(temperatureCountHack); //2
-    return bot.sendPhoto(msg.from.id, 'https://i.imgur.com/Qdn6q11.png');
+    return bot.sendPhoto(msg.from.id, 'https://i.imgur.com/N8yo1ea.png');
   } else if(temperatureCountHack == 2){
     temperatureCountHack--;
     console.log(temperatureCountHack); //1
-    return bot.sendPhoto(msg.from.id, 'https://i.imgur.com/lzjALlx.png') + bot.sendPhoto(msg.from.id, 'https://i.imgur.com/KIqr7qo.png');
+    return bot.sendPhoto(msg.from.id, 'https://i.imgur.com/NojwgRI.png') + bot.sendPhoto(msg.from.id, 'https://i.imgur.com/KIqr7qo.png');
   }
 });
 
